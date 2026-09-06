@@ -38,7 +38,26 @@ function sumOfPositive(arr){
    else
     total=0;
 }
-console.log(sumOfPositive)
+console.log(sumOfPositive) 
+// you are missing a return type also the function was not called well your total variable initiation is wrong
+// what was the output? i get SyntaxError: Can't create duplicate variable: 'arr'
+// what other ways can this be done, can it be improved?
+
+
+//-> you need to find positive numbers and sum them, so the sumation of all positive numbers
+function sumationOfPositiveNumbers(arr){
+    let sumOfPositiveNumbers = 0
+    for( number of arr){
+        if(number> 0){ //check for positive numbers
+            sumOfPositiveNumbers = sumOfPositiveNumbers + number // sum of the found positive number + existing ones
+        }
+    }
+        return sumOfPositiveNumbers // return the total number
+}
+const newArray=[1, -4, 7, 12] 
+console.log(sumationOfPositiveNumbers(newArray))
+
+
 
 
 /*Given an array of integers your solution should find the smallest integer.
@@ -61,7 +80,10 @@ function minNumber(arr){
     return(smallest);
 
 }
-console.log(minNumber)
+console.log(minNumber) 
+// what was the output? i get 34
+// what other ways can this be done, can it be improved?
+//Did you get the required output?
 
 /*Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string. The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.
 
@@ -87,8 +109,10 @@ function countOfReccuringAlphabet(str){
         count++
     return(firstAlphabet, count)
 }
+//i get ReferenceError: Can't find variable: str
+// whats your output?
 
-//this i don't understand
+//this i don't understand -> i havent taught this yet so i was hoping you search on object destructuring but thats fine
 Description:
 **I have currently only implemented basic tests and am publishing with the goal of getting feedback on viability of the general idea. Still writing tests but would love to know what people think. Thank you!
 The goal of this kata is to use object destructuring to define the parameters of a function.
